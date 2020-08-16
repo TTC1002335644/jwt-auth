@@ -48,9 +48,9 @@ class Jwt
         return new JwtObj(['secretKey' => $this->secretKey]);
     }
 
-    public function decode(?string $key)
+    public function decode(?string $key) :? JwtObj
     {
-        $items = explode(',' , $key);
+        $items = explode('.' , $key);
 
         //token格式
         if( count($items) !== 3){

@@ -9,7 +9,7 @@ class Encryption
      */
     private static $instance = null;
 
-    function __construct()
+    protected function __construct()
     {
     }
 

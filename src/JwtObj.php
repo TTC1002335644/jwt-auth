@@ -24,8 +24,14 @@ class JwtObj
     protected $payload;
 
 
-    protected function initialize():void
+    protected function __construct(array $config = [])
     {
+        if(!empty($config)){
+            foreach ($config as $key => $val){
+                $this->{$key} = $val;
+            }
+        }
+
         if(empty($this->nbf)){
             $this->nbf = time();
         }
