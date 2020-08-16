@@ -4,7 +4,7 @@ namespace bang\jwt;
 class Jwt
 {
     /**
-     * @var Jwt
+     * @var Jwt 本实例
      */
     private static $instance = null;
 
