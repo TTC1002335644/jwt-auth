@@ -3,7 +3,6 @@ namespace bang\jwt;
 
 class Jwt
 {
-
     /**
      * @var Jwt
      */
