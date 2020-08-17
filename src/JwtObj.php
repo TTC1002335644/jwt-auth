@@ -259,7 +259,6 @@ class JwtObj
 
     public function setHeader()
     {
-        //TODO:: 为了兼容老版本做了映射
         $algMap = [
             Jwt::ALG_METHOD_HMACSHA256 => Jwt::ALG_METHOD_HS256,
             Jwt::ALG_METHOD_AES => Jwt::ALG_METHOD_AES,

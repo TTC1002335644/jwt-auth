@@ -18,7 +18,8 @@ class Index
 {
     public function test()
     {
-            $jwtObject = Jwt::getInstance()->publish();
+            //setSecretKey是设置Secret Key 的方法
+            $jwtObject = Jwt::getInstance()->setSecretKey('xowuf')->publish();
             $jwtObject->setAlg('HMACSHA256'); // 加密方式
             $jwtObject->setAud('user'); // 用户
             $jwtObject->setExp(time()+3600); // 过期时间
