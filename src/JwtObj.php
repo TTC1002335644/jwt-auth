@@ -24,7 +24,7 @@ class JwtObj
     protected $payload;
 
 
-    protected function __construct(array $config = [])
+    public function __construct(array $config = [])
     {
         if(!empty($config)){
             foreach ($config as $key => $val){
@@ -332,6 +332,16 @@ class JwtObj
         }
 
         return $signature;
+    }
+
+    /**
+     * 生成token
+     * @return string
+     */
+    public function create()
+    {
+        $this->signature = $this->signature();
+        return $this->header . '.' . $this->payload . '.' . $this->signature;
     }
 
     public function __toString()
