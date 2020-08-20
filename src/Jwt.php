@@ -67,7 +67,7 @@ class Jwt
         // 验证payload
         $payload = Encryption::getInstance()->base64UrlDecode($items[1]);
         $payload = json_decode($payload, true);
-        if (empty($header)) {
+        if (empty($payload)) {
             throw new Exception('Token payload is empty!');
         }
 
